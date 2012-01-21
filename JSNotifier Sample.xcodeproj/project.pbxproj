@@ -1,0 +1,458 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8C2D759914CB586100A7D16E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C2D759814CB586100A7D16E /* UIKit.framework */; };
+		8C2D759B14CB586100A7D16E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C2D759A14CB586100A7D16E /* Foundation.framework */; };
+		8C2D759D14CB586100A7D16E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C2D759C14CB586100A7D16E /* CoreGraphics.framework */; };
+		8C2D75A314CB586100A7D16E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8C2D75A114CB586100A7D16E /* InfoPlist.strings */; };
+		8C2D75A514CB586100A7D16E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2D75A414CB586100A7D16E /* main.m */; };
+		8C2D75A914CB586100A7D16E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2D75A814CB586100A7D16E /* AppDelegate.m */; };
+		8C2D75AC14CB586100A7D16E /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2D75AA14CB586100A7D16E /* MainStoryboard_iPhone.storyboard */; };
+		8C2D75AF14CB586100A7D16E /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2D75AD14CB586100A7D16E /* MainStoryboard_iPad.storyboard */; };
+		8C2D75B214CB586100A7D16E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2D75B114CB586100A7D16E /* ViewController.m */; };
+		8C2D75BA14CB586200A7D16E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C2D75B914CB586200A7D16E /* SenTestingKit.framework */; };
+		8C2D75BB14CB586200A7D16E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C2D759814CB586100A7D16E /* UIKit.framework */; };
+		8C2D75BC14CB586200A7D16E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C2D759A14CB586100A7D16E /* Foundation.framework */; };
+		8C2D75C414CB586200A7D16E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8C2D75C214CB586200A7D16E /* InfoPlist.strings */; };
+		8C2D75C714CB586200A7D16E /* JSNotifier_SampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2D75C614CB586200A7D16E /* JSNotifier_SampleTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8C2D75BD14CB586200A7D16E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C2D758B14CB586100A7D16E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C2D759314CB586100A7D16E;
+			remoteInfo = "JSNotifier Sample";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8C2D759414CB586100A7D16E /* JSNotifier Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JSNotifier Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C2D759814CB586100A7D16E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8C2D759A14CB586100A7D16E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8C2D759C14CB586100A7D16E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8C2D75A014CB586100A7D16E /* JSNotifier Sample-Info.plist */ = {isa = PBXFileReference; path = "JSNotifier Sample-Info.plist"; sourceTree = "<group>"; };
+		8C2D75A214CB586100A7D16E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8C2D75A414CB586100A7D16E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8C2D75A614CB586100A7D16E /* JSNotifier Sample-Prefix.pch */ = {isa = PBXFileReference; path = "JSNotifier Sample-Prefix.pch"; sourceTree = "<group>"; };
+		8C2D75A714CB586100A7D16E /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		8C2D75A814CB586100A7D16E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8C2D75AB14CB586100A7D16E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		8C2D75AE14CB586100A7D16E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		8C2D75B014CB586100A7D16E /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		8C2D75B114CB586100A7D16E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8C2D75B814CB586100A7D16E /* JSNotifier SampleTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "JSNotifier SampleTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C2D75B914CB586200A7D16E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		8C2D75C114CB586200A7D16E /* JSNotifier SampleTests-Info.plist */ = {isa = PBXFileReference; path = "JSNotifier SampleTests-Info.plist"; sourceTree = "<group>"; };
+		8C2D75C314CB586200A7D16E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8C2D75C514CB586200A7D16E /* JSNotifier_SampleTests.h */ = {isa = PBXFileReference; path = JSNotifier_SampleTests.h; sourceTree = "<group>"; };
+		8C2D75C614CB586200A7D16E /* JSNotifier_SampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSNotifier_SampleTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8C2D759114CB586100A7D16E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C2D759914CB586100A7D16E /* UIKit.framework in Frameworks */,
+				8C2D759B14CB586100A7D16E /* Foundation.framework in Frameworks */,
+				8C2D759D14CB586100A7D16E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C2D75B414CB586100A7D16E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C2D75BA14CB586200A7D16E /* SenTestingKit.framework in Frameworks */,
+				8C2D75BB14CB586200A7D16E /* UIKit.framework in Frameworks */,
+				8C2D75BC14CB586200A7D16E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8C2D758914CB586100A7D16E = {
+			isa = PBXGroup;
+			children = (
+				8C2D759E14CB586100A7D16E /* JSNotifier Sample */,
+				8C2D75BF14CB586200A7D16E /* JSNotifier SampleTests */,
+				8C2D759714CB586100A7D16E /* Frameworks */,
+				8C2D759514CB586100A7D16E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8C2D759514CB586100A7D16E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8C2D759414CB586100A7D16E /* JSNotifier Sample.app */,
+				8C2D75B814CB586100A7D16E /* JSNotifier SampleTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8C2D759714CB586100A7D16E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C2D759814CB586100A7D16E /* UIKit.framework */,
+				8C2D759A14CB586100A7D16E /* Foundation.framework */,
+				8C2D759C14CB586100A7D16E /* CoreGraphics.framework */,
+				8C2D75B914CB586200A7D16E /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8C2D759E14CB586100A7D16E /* JSNotifier Sample */ = {
+			isa = PBXGroup;
+			children = (
+				8C2D75A714CB586100A7D16E /* AppDelegate.h */,
+				8C2D75A814CB586100A7D16E /* AppDelegate.m */,
+				8C2D75AA14CB586100A7D16E /* MainStoryboard_iPhone.storyboard */,
+				8C2D75AD14CB586100A7D16E /* MainStoryboard_iPad.storyboard */,
+				8C2D75B014CB586100A7D16E /* ViewController.h */,
+				8C2D75B114CB586100A7D16E /* ViewController.m */,
+				8C2D759F14CB586100A7D16E /* Supporting Files */,
+			);
+			path = "JSNotifier Sample";
+			sourceTree = "<group>";
+		};
+		8C2D759F14CB586100A7D16E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8C2D75A014CB586100A7D16E /* JSNotifier Sample-Info.plist */,
+				8C2D75A114CB586100A7D16E /* InfoPlist.strings */,
+				8C2D75A414CB586100A7D16E /* main.m */,
+				8C2D75A614CB586100A7D16E /* JSNotifier Sample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8C2D75BF14CB586200A7D16E /* JSNotifier SampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				8C2D75C514CB586200A7D16E /* JSNotifier_SampleTests.h */,
+				8C2D75C614CB586200A7D16E /* JSNotifier_SampleTests.m */,
+				8C2D75C014CB586200A7D16E /* Supporting Files */,
+			);
+			path = "JSNotifier SampleTests";
+			sourceTree = "<group>";
+		};
+		8C2D75C014CB586200A7D16E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8C2D75C114CB586200A7D16E /* JSNotifier SampleTests-Info.plist */,
+				8C2D75C214CB586200A7D16E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8C2D759314CB586100A7D16E /* JSNotifier Sample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C2D75CA14CB586200A7D16E /* Build configuration list for PBXNativeTarget "JSNotifier Sample" */;
+			buildPhases = (
+				8C2D759014CB586100A7D16E /* Sources */,
+				8C2D759114CB586100A7D16E /* Frameworks */,
+				8C2D759214CB586100A7D16E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "JSNotifier Sample";
+			productName = "JSNotifier Sample";
+			productReference = 8C2D759414CB586100A7D16E /* JSNotifier Sample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8C2D75B714CB586100A7D16E /* JSNotifier SampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C2D75CD14CB586200A7D16E /* Build configuration list for PBXNativeTarget "JSNotifier SampleTests" */;
+			buildPhases = (
+				8C2D75B314CB586100A7D16E /* Sources */,
+				8C2D75B414CB586100A7D16E /* Frameworks */,
+				8C2D75B514CB586100A7D16E /* Resources */,
+				8C2D75B614CB586100A7D16E /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8C2D75BE14CB586200A7D16E /* PBXTargetDependency */,
+			);
+			name = "JSNotifier SampleTests";
+			productName = "JSNotifier SampleTests";
+			productReference = 8C2D75B814CB586100A7D16E /* JSNotifier SampleTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8C2D758B14CB586100A7D16E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 8C2D758E14CB586100A7D16E /* Build configuration list for PBXProject "JSNotifier Sample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8C2D758914CB586100A7D16E;
+			productRefGroup = 8C2D759514CB586100A7D16E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8C2D759314CB586100A7D16E /* JSNotifier Sample */,
+				8C2D75B714CB586100A7D16E /* JSNotifier SampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8C2D759214CB586100A7D16E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C2D75A314CB586100A7D16E /* InfoPlist.strings in Resources */,
+				8C2D75AC14CB586100A7D16E /* MainStoryboard_iPhone.storyboard in Resources */,
+				8C2D75AF14CB586100A7D16E /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C2D75B514CB586100A7D16E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C2D75C414CB586200A7D16E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8C2D75B614CB586100A7D16E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8C2D759014CB586100A7D16E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C2D75A514CB586100A7D16E /* main.m in Sources */,
+				8C2D75A914CB586100A7D16E /* AppDelegate.m in Sources */,
+				8C2D75B214CB586100A7D16E /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C2D75B314CB586100A7D16E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C2D75C714CB586200A7D16E /* JSNotifier_SampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8C2D75BE14CB586200A7D16E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8C2D759314CB586100A7D16E /* JSNotifier Sample */;
+			targetProxy = 8C2D75BD14CB586200A7D16E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8C2D75A114CB586100A7D16E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C2D75A214CB586100A7D16E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8C2D75AA14CB586100A7D16E /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C2D75AB14CB586100A7D16E /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		8C2D75AD14CB586100A7D16E /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C2D75AE14CB586100A7D16E /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		8C2D75C214CB586200A7D16E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C2D75C314CB586200A7D16E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8C2D75C814CB586200A7D16E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8C2D75C914CB586200A7D16E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8C2D75CB14CB586200A7D16E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JSNotifier Sample/JSNotifier Sample-Prefix.pch";
+				INFOPLIST_FILE = "JSNotifier Sample/JSNotifier Sample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8C2D75CC14CB586200A7D16E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JSNotifier Sample/JSNotifier Sample-Prefix.pch";
+				INFOPLIST_FILE = "JSNotifier Sample/JSNotifier Sample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		8C2D75CE14CB586200A7D16E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/JSNotifier Sample.app/JSNotifier Sample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JSNotifier Sample/JSNotifier Sample-Prefix.pch";
+				INFOPLIST_FILE = "JSNotifier SampleTests/JSNotifier SampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		8C2D75CF14CB586200A7D16E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/JSNotifier Sample.app/JSNotifier Sample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JSNotifier Sample/JSNotifier Sample-Prefix.pch";
+				INFOPLIST_FILE = "JSNotifier SampleTests/JSNotifier SampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8C2D758E14CB586100A7D16E /* Build configuration list for PBXProject "JSNotifier Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C2D75C814CB586200A7D16E /* Debug */,
+				8C2D75C914CB586200A7D16E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C2D75CA14CB586200A7D16E /* Build configuration list for PBXNativeTarget "JSNotifier Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C2D75CB14CB586200A7D16E /* Debug */,
+				8C2D75CC14CB586200A7D16E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8C2D75CD14CB586200A7D16E /* Build configuration list for PBXNativeTarget "JSNotifier SampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C2D75CE14CB586200A7D16E /* Debug */,
+				8C2D75CF14CB586200A7D16E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8C2D758B14CB586100A7D16E /* Project object */;
+}
