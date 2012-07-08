@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8C1C8EFF14CE5B4B00EFB7FB /* thing.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C1C8EFE14CE5B4B00EFB7FB /* thing.png */; };
 		8C2D759914CB586100A7D16E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C2D759814CB586100A7D16E /* UIKit.framework */; };
 		8C2D759B14CB586100A7D16E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C2D759A14CB586100A7D16E /* Foundation.framework */; };
 		8C2D759D14CB586100A7D16E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C2D759C14CB586100A7D16E /* CoreGraphics.framework */; };
@@ -41,7 +40,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8C1C8EFE14CE5B4B00EFB7FB /* thing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thing.png; sourceTree = "<group>"; };
 		8C2D759414CB586100A7D16E /* JSNotifier Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JSNotifier Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C2D759814CB586100A7D16E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8C2D759A14CB586100A7D16E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -103,7 +101,6 @@
 				8C959F9B15A8D12800B44BCB /* NotifyCheck@2x.png */,
 				8C959F9C15A8D12800B44BCB /* NotifyX.png */,
 				8C959F9D15A8D12800B44BCB /* NotifyX@2x.png */,
-				8C1C8EFE14CE5B4B00EFB7FB /* thing.png */,
 				8C2D759E14CB586100A7D16E /* JSNotifier Sample */,
 				8C2D75BF14CB586200A7D16E /* JSNotifier SampleTests */,
 				8C2D759714CB586100A7D16E /* Frameworks */,
@@ -259,7 +256,6 @@
 				8C2D75A314CB586100A7D16E /* InfoPlist.strings in Resources */,
 				8C2D75AC14CB586100A7D16E /* MainStoryboard_iPhone.storyboard in Resources */,
 				8C2D75AF14CB586100A7D16E /* MainStoryboard_iPad.storyboard in Resources */,
-				8C1C8EFF14CE5B4B00EFB7FB /* thing.png in Resources */,
 				8C959F9E15A8D12800B44BCB /* NotifyCheck.png in Resources */,
 				8C959F9F15A8D12800B44BCB /* NotifyCheck@2x.png in Resources */,
 				8C959FA015A8D12800B44BCB /* NotifyX.png in Resources */,
