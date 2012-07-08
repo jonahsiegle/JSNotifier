@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C1C8EFF14CE5B4B00EFB7FB /* thing.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C1C8EFE14CE5B4B00EFB7FB /* thing.png */; };
 		8C2D759914CB586100A7D16E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C2D759814CB586100A7D16E /* UIKit.framework */; };
 		8C2D759B14CB586100A7D16E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C2D759A14CB586100A7D16E /* Foundation.framework */; };
 		8C2D759D14CB586100A7D16E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C2D759C14CB586100A7D16E /* CoreGraphics.framework */; };
@@ -21,6 +22,12 @@
 		8C2D75BC14CB586200A7D16E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C2D759A14CB586100A7D16E /* Foundation.framework */; };
 		8C2D75C414CB586200A7D16E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8C2D75C214CB586200A7D16E /* InfoPlist.strings */; };
 		8C2D75C714CB586200A7D16E /* JSNotifier_SampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2D75C614CB586200A7D16E /* JSNotifier_SampleTests.m */; };
+		8C2D75D314CB589B00A7D16E /* JSNotifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2D75D214CB589B00A7D16E /* JSNotifier.m */; };
+		8C32CEF014D230B000BB24A8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C32CEEF14D230B000BB24A8 /* QuartzCore.framework */; };
+		8C959F9E15A8D12800B44BCB /* NotifyCheck.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C959F9A15A8D12800B44BCB /* NotifyCheck.png */; };
+		8C959F9F15A8D12800B44BCB /* NotifyCheck@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C959F9B15A8D12800B44BCB /* NotifyCheck@2x.png */; };
+		8C959FA015A8D12800B44BCB /* NotifyX.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C959F9C15A8D12800B44BCB /* NotifyX.png */; };
+		8C959FA115A8D12800B44BCB /* NotifyX@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C959F9D15A8D12800B44BCB /* NotifyX@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,26 +41,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8C1C8EFE14CE5B4B00EFB7FB /* thing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thing.png; sourceTree = "<group>"; };
 		8C2D759414CB586100A7D16E /* JSNotifier Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JSNotifier Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C2D759814CB586100A7D16E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8C2D759A14CB586100A7D16E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8C2D759C14CB586100A7D16E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		8C2D75A014CB586100A7D16E /* JSNotifier Sample-Info.plist */ = {isa = PBXFileReference; path = "JSNotifier Sample-Info.plist"; sourceTree = "<group>"; };
+		8C2D75A014CB586100A7D16E /* JSNotifier Sample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JSNotifier Sample-Info.plist"; sourceTree = "<group>"; };
 		8C2D75A214CB586100A7D16E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8C2D75A414CB586100A7D16E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8C2D75A614CB586100A7D16E /* JSNotifier Sample-Prefix.pch */ = {isa = PBXFileReference; path = "JSNotifier Sample-Prefix.pch"; sourceTree = "<group>"; };
-		8C2D75A714CB586100A7D16E /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		8C2D75A614CB586100A7D16E /* JSNotifier Sample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JSNotifier Sample-Prefix.pch"; sourceTree = "<group>"; };
+		8C2D75A714CB586100A7D16E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8C2D75A814CB586100A7D16E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8C2D75AB14CB586100A7D16E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		8C2D75AE14CB586100A7D16E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		8C2D75B014CB586100A7D16E /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		8C2D75B014CB586100A7D16E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		8C2D75B114CB586100A7D16E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8C2D75B814CB586100A7D16E /* JSNotifier SampleTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "JSNotifier SampleTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C2D75B914CB586200A7D16E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		8C2D75C114CB586200A7D16E /* JSNotifier SampleTests-Info.plist */ = {isa = PBXFileReference; path = "JSNotifier SampleTests-Info.plist"; sourceTree = "<group>"; };
+		8C2D75C114CB586200A7D16E /* JSNotifier SampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JSNotifier SampleTests-Info.plist"; sourceTree = "<group>"; };
 		8C2D75C314CB586200A7D16E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		8C2D75C514CB586200A7D16E /* JSNotifier_SampleTests.h */ = {isa = PBXFileReference; path = JSNotifier_SampleTests.h; sourceTree = "<group>"; };
+		8C2D75C514CB586200A7D16E /* JSNotifier_SampleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSNotifier_SampleTests.h; sourceTree = "<group>"; };
 		8C2D75C614CB586200A7D16E /* JSNotifier_SampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSNotifier_SampleTests.m; sourceTree = "<group>"; };
+		8C2D75D114CB589B00A7D16E /* JSNotifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNotifier.h; sourceTree = "<group>"; };
+		8C2D75D214CB589B00A7D16E /* JSNotifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNotifier.m; sourceTree = "<group>"; };
+		8C32CEEF14D230B000BB24A8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		8C959F9A15A8D12800B44BCB /* NotifyCheck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NotifyCheck.png; sourceTree = "<group>"; };
+		8C959F9B15A8D12800B44BCB /* NotifyCheck@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NotifyCheck@2x.png"; sourceTree = "<group>"; };
+		8C959F9C15A8D12800B44BCB /* NotifyX.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NotifyX.png; sourceTree = "<group>"; };
+		8C959F9D15A8D12800B44BCB /* NotifyX@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NotifyX@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C32CEF014D230B000BB24A8 /* QuartzCore.framework in Frameworks */,
 				8C2D759914CB586100A7D16E /* UIKit.framework in Frameworks */,
 				8C2D759B14CB586100A7D16E /* Foundation.framework in Frameworks */,
 				8C2D759D14CB586100A7D16E /* CoreGraphics.framework in Frameworks */,
@@ -83,6 +99,11 @@
 		8C2D758914CB586100A7D16E = {
 			isa = PBXGroup;
 			children = (
+				8C959F9A15A8D12800B44BCB /* NotifyCheck.png */,
+				8C959F9B15A8D12800B44BCB /* NotifyCheck@2x.png */,
+				8C959F9C15A8D12800B44BCB /* NotifyX.png */,
+				8C959F9D15A8D12800B44BCB /* NotifyX@2x.png */,
+				8C1C8EFE14CE5B4B00EFB7FB /* thing.png */,
 				8C2D759E14CB586100A7D16E /* JSNotifier Sample */,
 				8C2D75BF14CB586200A7D16E /* JSNotifier SampleTests */,
 				8C2D759714CB586100A7D16E /* Frameworks */,
@@ -102,6 +123,7 @@
 		8C2D759714CB586100A7D16E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8C32CEEF14D230B000BB24A8 /* QuartzCore.framework */,
 				8C2D759814CB586100A7D16E /* UIKit.framework */,
 				8C2D759A14CB586100A7D16E /* Foundation.framework */,
 				8C2D759C14CB586100A7D16E /* CoreGraphics.framework */,
@@ -113,6 +135,7 @@
 		8C2D759E14CB586100A7D16E /* JSNotifier Sample */ = {
 			isa = PBXGroup;
 			children = (
+				8C2D75D014CB587E00A7D16E /* JSNotifier */,
 				8C2D75A714CB586100A7D16E /* AppDelegate.h */,
 				8C2D75A814CB586100A7D16E /* AppDelegate.m */,
 				8C2D75AA14CB586100A7D16E /* MainStoryboard_iPhone.storyboard */,
@@ -152,6 +175,15 @@
 				8C2D75C214CB586200A7D16E /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8C2D75D014CB587E00A7D16E /* JSNotifier */ = {
+			isa = PBXGroup;
+			children = (
+				8C2D75D114CB589B00A7D16E /* JSNotifier.h */,
+				8C2D75D214CB589B00A7D16E /* JSNotifier.m */,
+			);
+			name = JSNotifier;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +259,11 @@
 				8C2D75A314CB586100A7D16E /* InfoPlist.strings in Resources */,
 				8C2D75AC14CB586100A7D16E /* MainStoryboard_iPhone.storyboard in Resources */,
 				8C2D75AF14CB586100A7D16E /* MainStoryboard_iPad.storyboard in Resources */,
+				8C1C8EFF14CE5B4B00EFB7FB /* thing.png in Resources */,
+				8C959F9E15A8D12800B44BCB /* NotifyCheck.png in Resources */,
+				8C959F9F15A8D12800B44BCB /* NotifyCheck@2x.png in Resources */,
+				8C959FA015A8D12800B44BCB /* NotifyX.png in Resources */,
+				8C959FA115A8D12800B44BCB /* NotifyX@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +301,7 @@
 				8C2D75A514CB586100A7D16E /* main.m in Sources */,
 				8C2D75A914CB586100A7D16E /* AppDelegate.m in Sources */,
 				8C2D75B214CB586100A7D16E /* ViewController.m in Sources */,
+				8C2D75D314CB589B00A7D16E /* JSNotifier.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +413,7 @@
 				GCC_PREFIX_HEADER = "JSNotifier Sample/JSNotifier Sample-Prefix.pch";
 				INFOPLIST_FILE = "JSNotifier Sample/JSNotifier Sample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -386,6 +425,7 @@
 				GCC_PREFIX_HEADER = "JSNotifier Sample/JSNotifier Sample-Prefix.pch";
 				INFOPLIST_FILE = "JSNotifier Sample/JSNotifier Sample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -443,6 +483,7 @@
 				8C2D75CC14CB586200A7D16E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8C2D75CD14CB586200A7D16E /* Build configuration list for PBXNativeTarget "JSNotifier SampleTests" */ = {
 			isa = XCConfigurationList;
@@ -451,6 +492,7 @@
 				8C2D75CF14CB586200A7D16E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

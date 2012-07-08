@@ -31,6 +31,49 @@
     // e.g. self.myOutlet = nil;
 }
 
+- (IBAction)succsess:(id)sender{
+    
+    JSNotifier *notify = [[JSNotifier alloc]initWithTitle:@"Upload Succeeded"];
+    notify.accessoryView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"NotifyCheck.png"]];
+    [notify showFor:2.0];
+    
+}
+- (IBAction)error:(id)sender{
+    
+    JSNotifier *notify = [[JSNotifier alloc]initWithTitle:@"Upload Failed"];
+    notify.accessoryView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"NotifyX.png"]];
+    [notify showFor:2.0];
+
+
+}
+- (IBAction)activity:(id)sender{
+    
+    UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+    [activityIndicator startAnimating];
+    
+    JSNotifier *notify = [[JSNotifier alloc]initWithTitle:@"Uploading..."];
+    notify.accessoryView = activityIndicator;
+    [notify showFor:6.0];
+}
+- (IBAction)loop:(id)sender{
+    
+    UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+    [activityIndicator startAnimating];
+    
+    JSNotifier *notify = [[JSNotifier alloc]initWithTitle:@"Uploading..."];
+    notify.accessoryView = activityIndicator;
+    [notify show];
+    
+    //A sample six second delay.
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 6.0 * NSEC_PER_SEC), dispatch_get_current_queue(), ^{
+        
+        [notify setAccessoryView:[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"NotifyCheck.png"]] animated:YES];
+        [notify setTitle:@"Upload Succeeded" animated:YES];
+        
+        [notify hideIn:4.0];
+    });
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
