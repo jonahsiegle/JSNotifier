@@ -26,8 +26,21 @@ const CGFloat kHeight = 40;
 @synthesize accessoryView, title = _title;
 @synthesize didShowBlock, didHideBlock;
 
+BOOL JSIsPad() {
+#ifdef __IPHONE_3_2
+    return UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad;
+#else
+    return NO;
+#endif
+}
+
 CGFloat JSStatusHeight()
 {
+    if (JSIsPad())
+    {
+        return 0;
+    }
+    
     CGRect statusBarFrame = [UIApplication sharedApplication].statusBarFrame;
     
     UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
