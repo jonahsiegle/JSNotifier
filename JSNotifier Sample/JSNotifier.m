@@ -13,18 +13,74 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 */
+#if !defined(__has_feature) || !__has_feature(objc_arc)
+#error "This file requires ARC support."
+#endif
 
 #import "JSNotifier.h"
 #define _displaytime 4.f
 
+const CGFloat kHeight = 40;
+
 @implementation JSNotifier
 @synthesize accessoryView, title = _title;
+@synthesize didShowBlock, didHideBlock;
 
+CGFloat JSStatusHeight()
+{
+    CGRect statusBarFrame = [UIApplication sharedApplication].statusBarFrame;
+    
+    UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
+    if (UIInterfaceOrientationIsLandscape(orientation))
+    {
+        return statusBarFrame.size.width;
+    }
+        
+    return statusBarFrame.size.height;
+}
 
-- (id)initWithTitle:(NSString *)title{
+CGRect JSScreenBounds()
+{
+    UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
     
-    if (self = [super initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height, [UIScreen mainScreen].bounds.size.width, 40)]){
+    CGRect bounds = [UIScreen mainScreen].bounds;
+    if (UIInterfaceOrientationIsLandscape(orientation))
+    {
+        CGFloat width = bounds.size.width;
+        bounds.size.width = bounds.size.height;
+        bounds.size.height = width;
+    }
     
+    return bounds;
+}
+
+- (id)initWithTitle:(NSString *)title
+{
+    self = [self initWithTitle:title position:JSNotifierPositionBottom];
+    
+    return self;
+}
+
+- (id)initWithTitle:(NSString *)title position:(JSNotifierPosition)position {
+    
+    CGRect screenBounds = JSScreenBounds();
+    CGFloat top = 0;
+    CGFloat width = screenBounds.size.width;
+    
+    switch (position) {
+        case JSNotifierPositionBottom:
+            top = screenBounds.size.height;
+            break;
+            
+        default:
+            top = JSStatusHeight() - kHeight;
+            break;
+    }
+    
+    if (self = [super initWithFrame:CGRectMake(0, top, width, kHeight)]){
+    
+        _position = position;
+        
         self.backgroundColor = [UIColor clearColor];
         
         _txtLabel = [[UILabel alloc]initWithFrame:CGRectMake(8, 12, self.frame.size.width - 0, 20)];
@@ -44,14 +100,18 @@ limitations under the License.
         
         self.title= title;
 
-
+        self.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+        if (_position == JSNotifierPositionBottom)
+        {
+            self.autoresizingMask |= UIViewAutoresizingFlexibleTopMargin;
+        }
+        self.contentMode = UIViewContentModeRedraw;
         
-        [[[[UIApplication sharedApplication] delegate] window] addSubview:self];
+        [[[UIApplication sharedApplication].keyWindow.subviews objectAtIndex:0] addSubview:self];
     }
     
     return self;
 }
-
 
 - (void)setAccessoryView:(UIView *)__accessoryView{
         
@@ -73,13 +133,36 @@ limitations under the License.
     [_txtLabel setText:title];
 }
 
+-(UILineBreakMode)lineBreakMode
+{
+    return _txtLabel.lineBreakMode;
+}
+
+-(void)setLineBreakMode:(UILineBreakMode)lineBreakMode
+{
+    _txtLabel.lineBreakMode = lineBreakMode;
+}
+
 - (void)show{
     
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:0.3f];
+    [UIView setAnimationDelegate:self];
+    [UIView setAnimationDidStopSelector:@selector(notifierDidShow)];
+    
+    CGFloat offset = 0;
+    switch (_position)
+    {
+        case JSNotifierPositionBottom:
+            offset = -kHeight;
+            break;
+        default:
+            offset = kHeight;
+            break;
+    }
     
     CGRect move = self.frame;
-    move.origin.y -=40.f;
+    move.origin.y += offset;
     self.frame = move;
     
     [UIView commitAnimations];
@@ -88,33 +171,25 @@ limitations under the License.
 
 - (void)showFor:(float)time{
     
-    [UIView beginAnimations:nil context:nil];
-    [UIView setAnimationDuration:0.3f];
-    
-    CGRect move = self.frame;
-    move.origin.y -=40.f;
-    self.frame = move;
-    
-    [UIView commitAnimations];
-    
+    [self show];
     [self hideIn:time];
+}
+
+-(void)notifierDidShow
+{
+    if (didShowBlock)
+    {
+        didShowBlock();
+    }
 }
 
 - (void)hideIn:(float)seconds{
     
+    __block JSNotifier *blockSelf = self;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, seconds * NSEC_PER_SEC), dispatch_get_current_queue(), ^{
         
-        [UIView beginAnimations:nil context:nil];
-        [UIView setAnimationDuration:0.3f];
-        [UIView setAnimationDelegate: self]; //or some other object that has necessary method
-        [UIView setAnimationDidStopSelector: @selector(removeFromSuperview)];
+        [blockSelf hide];
         
-        
-        CGRect move = self.frame;
-        move.origin.y +=40.f;
-        self.frame = move;
-        
-        [UIView commitAnimations];
     });
 
 }
@@ -124,14 +199,34 @@ limitations under the License.
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:0.3f];
     [UIView setAnimationDelegate: self]; //or some other object that has necessary method
-    [UIView setAnimationDidStopSelector: @selector(removeFromSuperview)];
-        
-        
+    [UIView setAnimationDidStopSelector: @selector(notifierDidHide)];
+    
+    CGFloat offset = 0;
+    switch (_position)
+    {
+        case JSNotifierPositionBottom:
+            offset = kHeight;
+            break;
+            
+        default:
+            offset = -kHeight;
+            break;
+    }
+    
     CGRect move = self.frame;
-    move.origin.y +=40.f;
+    move.origin.y += offset;
     self.frame = move;
         
     [UIView commitAnimations];
+}
+
+-(void)notifierDidHide
+{
+    if (didHideBlock)
+    {
+        didHideBlock();
+    }
+    [self removeFromSuperview];
 }
 
 
@@ -222,7 +317,7 @@ limitations under the License.
     CGColorSpaceRef colorspace = CGColorSpaceCreateDeviceRGB();
     
     //Background color
-    CGRect rectangle = CGRectMake(0,4,320,36);
+    CGRect rectangle = CGRectMake(0,4,rect.size.width,36);
     CGContextAddRect(context, rectangle);
     CGContextSetFillColorWithColor(context, [UIColor colorWithRed:0.0f green:0.0f blue:0.0f alpha:0.6f].CGColor);
     CGContextFillRect(context, rectangle);
@@ -234,7 +329,7 @@ limitations under the License.
     CGContextSetStrokeColorWithColor(context, Whitecolor);
     
     CGContextMoveToPoint(context, 0, 4.5);
-    CGContextAddLineToPoint(context, 320, 4.5);
+    CGContextAddLineToPoint(context, rect.size.width, 4.5);
     
     CGContextStrokePath(context);
     CGColorRelease(Whitecolor);
@@ -246,15 +341,15 @@ limitations under the License.
     CGContextSetStrokeColorWithColor(context, Blackcolor);
     
     CGContextMoveToPoint(context, 0, 3.5);
-    CGContextAddLineToPoint(context, 320, 3.5);
+    CGContextAddLineToPoint(context, rect.size.width, 3.5);
     
     CGContextStrokePath(context);
     CGColorRelease(Blackcolor);
     
     //Draw Shadow
     
-    CGRect imageBounds = CGRectMake(0.0f, 0.0f, [UIScreen mainScreen].bounds.size.width, 3.f);
-	CGRect bounds = CGRectMake(0, 0, 320, 3);
+    CGRect imageBounds = CGRectMake(0.0f, 0.0f, rect.size.width, 3.f);
+	CGRect bounds = CGRectMake(0, 0, rect.size.width, 3);
 	CGFloat alignStroke;
 	CGFloat resolution;
 	CGMutablePathRef path;
@@ -279,7 +374,7 @@ limitations under the License.
 	
 	alignStroke = 0.0f;
 	path = CGPathCreateMutable();
-	drawRect = CGRectMake(0.0f, 0.0f, [UIScreen mainScreen].bounds.size.width, 3.0f);
+	drawRect = CGRectMake(0.0f, 0.0f, rect.size.width, 3.0f);
 	drawRect.origin.x = (roundf(resolution * drawRect.origin.x + alignStroke) - alignStroke) / resolution;
 	drawRect.origin.y = (roundf(resolution * drawRect.origin.y + alignStroke) - alignStroke) / resolution;
 	drawRect.size.width = roundf(resolution * drawRect.size.width) / resolution;
