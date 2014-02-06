@@ -18,15 +18,23 @@
 
 #import <QuartzCore/QuartzCore.h>
 
+typedef enum {
+    JSNotifierPositionBottom,
+    JSNotifierPositionTop
+} JSNotifierPosition;
+
+typedef void (^JSNotifierCallbackBlock)();
 
 @interface JSNotifier : UIView{
     
     @protected
     UILabel *_txtLabel;
+    JSNotifierPosition _position;
 }
 
 
 - (id)initWithTitle:(NSString *)title;
+- (id)initWithTitle:(NSString *)title position:(JSNotifierPosition)position;
 
 - (void)setAccessoryView:(UIView *)view animated:(BOOL)animated;
 
@@ -40,6 +48,13 @@
 
 @property (nonatomic, strong) UIView *accessoryView;
 @property (nonatomic, strong) NSString *title;
+@property (nonatomic, assign) UILineBreakMode lineBreakMode;
+
+// Called after the view has been shown
+@property (nonatomic, copy) JSNotifierCallbackBlock didShowBlock;
+
+// Called after the view has been hidden
+@property (nonatomic, copy) JSNotifierCallbackBlock didHideBlock;
 
 @end
 
